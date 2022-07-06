@@ -29,7 +29,7 @@ let submitHandler=(s)=>{
   else if(!regex.test(s.email)){
     errors.email="This is not a valid email"
   }
-  if(!s.mobile){
+  if(!s.mobile){  
     errors.mobile="Number is required"
   }
   if(s.mobile.length>10||s.number.length<10){
@@ -101,7 +101,32 @@ let submitHandler=(s)=>{
                     </form>
                 </div>
                </div>
-            </div>
+               <hr />
+               <hr />
+               <hr />
+              <table className="table table-hover md-9">
+                <thead className="bg-dark text-white">
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile No</th>
+                    <th>City</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {
+                      form.map((event)=>{
+                        return <tr>
+                          <td>{event.name}</td>
+                          <td>{event.email}</td>
+                          <td>{event.mobile}</td>
+                          <td>{event.city}</td>
+                        </tr>
+                      })
+                    }
+                </tbody>
+              </table>
+              </div>
         </div>
     </div>
     </>
