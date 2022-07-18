@@ -20,8 +20,8 @@ function App() {
           <Route path="/testimonial" element={<Testimonial />}/>
           <Route path="/contact" element={<Contact />}/>
         </Routes>
-        <Fooder />
       </Router>
+      <Fooder />
     </div>
   );
 }
