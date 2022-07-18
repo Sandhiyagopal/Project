@@ -18,7 +18,7 @@ const ETForm = (props) => {
             tdate:todayDate,
             addAmount:value,
             removeAmount:"-",
-            balanceAmount:totalAmount
+            balanceAmount:totalAmount+value
         }])
         console.log(totalAmount)
     }
@@ -28,7 +28,7 @@ const ETForm = (props) => {
             tdate:todayDate,
             addAmount:"-",
             removeAmount:value,
-            balanceAmount:totalAmount
+            balanceAmount:totalAmount-value
         }])
         console.log(totalAmount)
     }
